@@ -208,10 +208,20 @@ footer {
     .menu.active{
         display: flex;
     }
-    .icon_imgs {
-        display: grid;
-        flex-wrap: wrap;
-        margin-bottom: 50px;
-        margin-top: 50px;
+    .icon_imgs img {
+        width: 330px;
+        height: 180px;
+        padding: 10px 50px;
+        align-content: center;
+    }
+    .icon_imgs h2 {
+        padding: 5px 50px;
+        font-size: 30px;
+        color: #db49db;
+    }
+    .icon_imgs p {
+        padding: 5px 50px;
+        font-size: 15px;
+        text-align: justify;
     }
 }
