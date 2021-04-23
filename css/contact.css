@@ -1,0 +1,347 @@
+body{
+    font-family: 'Jura', sans-serif;
+}
+
+a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+}
+i.navbar_toggle{
+    display: none;
+}
+.menu{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+.menu li{
+    font-size: 16px;
+    padding: 9px 20px;
+}
+.menu li a {
+    text-decoration: none;
+    color: white;
+}
+.menu li:hover {
+    background-color: #f8c25d;
+    border-radius: 4px;
+}
+.menu li a:hover{
+    color: black;
+}
+.navbar_toggle{
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: #f8c25d;
+}
+
+header>nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 1.2rem 0;
+    background-color: #343fce;
+}
+header>nav>p {
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: 2px 13px;
+    color: #ffffff;
+}
+header>nav>ul {
+    display: flex;
+    padding: 2px 30px;
+}
+header>nav>p>a {
+    text-decoration: none;
+    color: white;
+}
+header>nav>ul>li {
+    list-style-type: none;
+    margin-left: 3.5rem;
+}
+header>nav>ul>li>a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-bottom: 5px;
+    color: #ffffff;
+}
+
+header>nav>ul>li {
+    list-style-type: none;
+    margin-left: 3.5rem;
+}
+header>nav>ul>li>a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-bottom: 5px;
+    color: #ffffff;
+} 
+
+.image{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+}
+
+.image > img{
+    width: 100%;
+    height: 300px;
+    /* background-image: url("../img/contact.jpg"); */
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    background-attachment: fixed; /* Parallax effect */
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    margin-bottom: 25px;
+    height: 300px;
+    background-image: url("../img/contact.jpg");
+}
+/* Contact Form */
+
+.contact {
+    display: flex;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    box-shadow: 2px 2px 2px 2px rgb(180, 180, 180, 0.50);
+  }
+
+  textarea {
+      height: 200px;
+  }
+
+  input::placeholder, textarea::placeholder {
+      color:#cccccc;
+      font-family: 'Jura', Arial, sans-serif;
+  }
+
+  button[type=submit] {
+    background-color: #f8c25d;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 50px;;
+
+  }
+
+  button[type=submit]:hover {
+      background-color:#f1b443;
+
+  }
+ /* Flip Card */
+  .grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 30px;
+    padding: 100px;
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 350px;
+    height: 350px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+
+  }
+  .flip-card-back {
+    background-color: #f8c25d;
+    color: black;
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-back h2 {
+      padding-top: 100px;
+      font-size: 50px;
+  }
+
+
+
+footer {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    color: white;
+    background-color: black;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    header>nav{
+        flex-direction: column;
+    }
+
+    .menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    i.navbar_toggle{
+        display: block;
+        padding: 3px 0px;
+    }
+    .menu.active{
+        display: flex;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        justify-items: center;
+        align-items: center;
+        grid-gap: 30px;
+        padding: 10px;
+      }
+    
+      .flip-card {
+        background-color: transparent;
+        width: 350px;
+        height: 350px;
+        perspective: 1000px;
+      }
+      
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      }
+      
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+      
+      .flip-card-front {
+        background-color: #343fce;
+        color: black;
+    
+      }
+      
+      .flip-card-front p {
+          color: white;
+          padding-bottom: 30px;
+    
+    
+      
+      }
+      .flip-card-back {
+        background-color: #f8c25d;
+        color: black;
+        transform: rotateY(180deg);
+      }
+    
+      .flip-card-back h1 {
+          padding-bottom: 20px;
+      }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    header>nav {
+        flex-direction: column;
+    }
+
+    .menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%
+    }
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    i.navbar_toggle{
+        display: block;
+        padding: 3px 0px;
+    }
+    .menu.active{
+        display: flex;
+    }
+}
+
