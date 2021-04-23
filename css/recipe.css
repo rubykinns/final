@@ -48,6 +48,9 @@ i.navbar_toggle{
 .menu li a:hover{
     color: black;
 }
+.underline {
+    text-decoration: underline;
+}
 .navbar_toggle{
     display: none;
     position: absolute;

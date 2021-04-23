@@ -51,6 +51,9 @@ i.navbar_toggle{
     color: black;
 }
 
+.underline {
+    text-decoration: underline;
+}
 .navbar_toggle{
     display: none;
     position: absolute;

@@ -79,6 +79,9 @@ header>nav {
     padding: 1.2rem 0;
     background-color: #343fce;
 }
+.underline {
+    text-decoration: underline;
+}
 
 .hvr-shutter-out-horizontal {
     display: inline-block;
