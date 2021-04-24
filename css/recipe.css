@@ -5,10 +5,7 @@ body{
     margin: auto;
     box-sizing: border-box;
     height: 100vh;
-    /* display: flex;
-    flex-direction: column; */
     justify-content: space-between;
-    /* align-items: center; */
 }
 a.skip{
     background: white;
@@ -230,3 +227,9 @@ footer {
         display: flex;
     }
 }
+
+@media screen and (prefers-reduced-motion: reduce){
+    a.skip{
+      -webkit-transition: none; 
+      transition: none;        
+     }

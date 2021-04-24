@@ -40,6 +40,9 @@ i.navbar_toggle{
 .menu li a:hover{
     color: black;
 }
+.underline {
+    text-decoration: underline;
+}
 .navbar_toggle{
     display: none;
     position: absolute;
@@ -47,7 +50,6 @@ i.navbar_toggle{
     font-size: 24px;
     color: #f8c25d;
 }
-
 header>nav {
     display: flex;
     justify-content: space-between;
@@ -62,14 +64,14 @@ header>nav>p {
     padding: 2px 13px;
     color: #ffffff;
 }
-header>nav>ul {
-    display: flex;
-    padding: 2px 30px;
-}
 header>nav>p>a {
     text-decoration: none;
     color: white;
 }
+header>nav>ul {
+    display: flex;
+    padding: 2px 30px;
+}
 header>nav>ul>li {
     list-style-type: none;
     margin-left: 3.5rem;
@@ -81,85 +83,20 @@ header>nav>ul>li>a {
     padding-bottom: 5px;
     color: #ffffff;
 }
-
-header>nav>ul>li {
-    list-style-type: none;
-    margin-left: 3.5rem;
-}
-header>nav>ul>li>a {
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 400;
-    padding-bottom: 5px;
-    color: #ffffff;
-}
-.underline {
-    text-decoration: underline;
-}
-/* Contact Us Header */
-h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 50px;
-    background-attachment: fixed; /* Parallax effect */
-    background-position: center;  /* Parallax effect */
-    background-repeat: no-repeat; /* Parallax effect */
-    background-size: cover;       /* Parallax effect */
-    margin-bottom: 25px;
-    height: 300px;
-    background-image: url("../img/contact.jpg");
-}
-/* Contact Form */
-
-.contact {
-    display: flex;
-    border-radius: 4px;
-    justify-content: center;
-    align-items: center;
-}
-
-input[type=text], input[type=email], textarea {
+.main_text {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-    box-shadow: 2px 2px 2px 2px rgb(180, 180, 180, 0.50);
-  }
+    height: 500px;
+    margin-top: 50px;
+    /* background-color: #f1f2f3; */
+}
+.main_text h1 {
+    font-size: 2rem;
+    text-align: center;
+}
 
-  textarea {
-      height: 200px;
-  }
-
-  input::placeholder, textarea::placeholder {
-      color:#cccccc;
-      font-family: 'Jura', Arial, sans-serif;
-  }
-
-  button[type=submit] {
-    background-color: #f8c25d;
-    color: black;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom: 50px;;
-  }
-
-  button[type=submit]:hover {
-      background-color:#f1b443;
-  }
-
- /* Flip Card */
-  .grid{
+.grid{
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
     justify-items: center;
     align-items: center;
     grid-gap: 30px;
@@ -172,25 +109,21 @@ input[type=text], input[type=email], textarea {
     height: 350px;
     perspective: 1000px;
   }
-
+  
   .flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.5s;
+    transition: transform 0.6s;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
-
-.flip-card:hover .flip-card-inner {
+  
+  .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-}
-
- .flip-card:focus-within .flip-card-inner{
-    transform: rotateY(180deg);
- }
-
+  }
+  
   .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -198,36 +131,50 @@ input[type=text], input[type=email], textarea {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
-
+  
   .flip-card-front {
-    background-color: #bbb;
+    background-color: #343fce;
     color: black;
-  }
 
+  }
+  
+  .flip-card-front p {
+      color: white;
+      font-size: 20px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+
+
+  
+  }
   .flip-card-back {
     background-color: #f8c25d;
     color: black;
     transform: rotateY(180deg);
   }
 
-  .flip-card-back h2 {
-      padding-top: 100px;
-      font-size: 50px;
+  .flip-card-back h1 {
+      padding-bottom: 20px;
   }
 
+ .image{
+     width: 300px;
+     height: 250px;
+ } 
 
-/* Footer */
-footer {
-    width: 100%;
-    text-align: center;
-    font-size: 1.1rem;
-    color: white;
-    background-color: black;
-    padding: 1rem;
-}
 
-@media screen and (max-width: 768px) {
-    header>nav{
+  footer {
+      width: 100%;
+      text-align: center;
+      font-size: 1.1rem;
+      color: white;
+      background-color: black;
+      padding: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+
+    header>nav {
         flex-direction: column;
     }
 
@@ -257,17 +204,17 @@ footer {
         justify-items: center;
         align-items: center;
         grid-gap: 30px;
-        padding: 10px;
+        padding: 100px;
       }
-
-    .flip-card {
+    
+      .flip-card {
         background-color: transparent;
         width: 350px;
         height: 350px;
         perspective: 1000px;
       }
-
-    .flip-card-inner {
+      
+      .flip-card-inner {
         position: relative;
         width: 100%;
         height: 100%;
@@ -276,41 +223,43 @@ footer {
         transform-style: preserve-3d;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       }
-
-    .flip-card:hover .flip-card-inner {
+      
+      .flip-card:hover .flip-card-inner {
         transform: rotateY(180deg);
       }
-
-    .flip-card-front, .flip-card-back {
+      
+      .flip-card-front, .flip-card-back {
         position: absolute;
         width: 100%;
         height: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
       }
-
-    .flip-card-front {
+      
+      .flip-card-front {
         background-color: #343fce;
         color: black;
+    
       }
-
-    .flip-card-front p {
+      
+      .flip-card-front p {
           color: white;
           padding-bottom: 30px;
-
+    
+    
+      
       }
-
-    .flip-card-back {
+      .flip-card-back {
         background-color: #f8c25d;
         color: black;
         transform: rotateY(180deg);
       }
-
-    .flip-card-back h1 {
+    
+      .flip-card-back h1 {
           padding-bottom: 20px;
       }
+    
 }
-
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     header>nav {
         flex-direction: column;
@@ -320,7 +269,7 @@ footer {
         display: none;
         flex-direction: column;
         align-items: center;
-        width: 100%
+        width: 100%;
     }
     .menu li {
         width: 100%;
@@ -334,21 +283,14 @@ footer {
     .menu.active{
         display: flex;
     }
+
+    .grid{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        justify-items: center;
+        align-items: center;
+        grid-gap: 30px;
+        padding: 100px;
+      }
 }
-
-@media screen and (prefers-reduced-motion: reduce){
-    a.skip{
-      -webkit-transition: none; 
-      transition: none;        
-     }
-    /*Turn off parallax effect*/
-    h1 {
-        background-attachment: initial;
-    }
-    /* #Turn off keyboard-accessible flip card */
-    .flip-card:focus-within{
-        transform: none;
-    }
-
-}
-

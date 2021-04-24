@@ -228,3 +228,9 @@ footer {
         text-align: justify;
     }
 }
+
+@media screen and (prefers-reduced-motion: reduce){
+    a.skip{
+      -webkit-transition: none; 
+      transition: none;        
+     }
